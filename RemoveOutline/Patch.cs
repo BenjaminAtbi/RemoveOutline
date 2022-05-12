@@ -12,8 +12,9 @@ namespace RemoveOutline
     {
         static bool Prefix(UnitEntityView __instance, ref UnitMultiHighlight ___m_Highlighter, bool raiseEvent = true)
         {
-            if(!__instance.MouseHighlighted && !__instance.DragBoxHighlighted && !__instance.EntityData.Descriptor.State.IsDead && !__instance.EntityData.IsPlayersEnemy &&
-               Game.Instance.Player.PartyAndPets.Contains(__instance.EntityData))
+            if (!Main.Enabled) return true;
+            if (!__instance.MouseHighlighted && !__instance.DragBoxHighlighted && !__instance.EntityData.Descriptor.State.IsDead && !__instance.EntityData.IsPlayersEnemy &&
+                Game.Instance.Player.PartyAndPets.Contains(__instance.EntityData))
             {
                 ___m_Highlighter.BaseColor = Color.clear;
 
