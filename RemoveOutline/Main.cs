@@ -12,6 +12,8 @@ namespace RemoveOutline
         static bool Load(UnityModManager.ModEntry modEntry)
         {
             modEntry.OnToggle = OnToggle;
+            var harmony = new Harmony(modEntry.Info.Id);
+            harmony.PatchAll();
             return true;
         }
 
