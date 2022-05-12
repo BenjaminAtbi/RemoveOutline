@@ -1,0 +1,10 @@
+﻿{
+  "Id": "RemoveOutline",
+  "DisplayName": "Remove Party Outline",
+  "Author": "username",
+  "Version": "1.0.0",
+  "ManagerVersion": "0.21.3",
+  "Requirements": [],
+  "AssemblyName": "RemoveOutline.dll",
+  "EntryMethod": "RemoveOutline.Main.Load"
+}
